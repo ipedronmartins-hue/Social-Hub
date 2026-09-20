@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="app" class="app">
-  <div class="statusbar"><span>social hub</span><span>‹ ›</span></div>
+  <div class="statusbar"><span>social hub</span><span>LUMIA 830</span></div>
   <div id="viewport" class="viewport">
 <div id="panorama" class="panorama">
   <nav class="pivot-nav">
@@ -90,7 +90,7 @@
 </div>
   </div>
   <div class="appbar">
-  <span>●</span><span>↻</span><span>⋯</span>
+  <span class="bar-home">HOME</span><span class="bar-refresh">ATUALIZAR</span><span class="bar-more">MAIS</span>
 </div>
 <div class="gesture-hint">desliza para mudar de ecrã</div>
 </div>
@@ -108,6 +108,7 @@
     current = n;
     panorama.style.left = (-320 * current) + 'px';
     viewport.scrollLeft = 0;
+    for(var p=0;p<nav.length;p++) nav[p].className = p===current ? "pivot current" : "pivot";
   }
 
   function down(x){
