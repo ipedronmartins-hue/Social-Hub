@@ -5,7 +5,9 @@ font-family:"Segoe WP","Segoe UI",Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:auto}
-body{min-width:320px}
+body{min-width:320px;overflow-x:auto}
+@viewport{width:device-width;zoom:1}
+
 a{color:#fff;text-decoration:none}
 
 .panorama{
