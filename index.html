@@ -7,7 +7,10 @@
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<div class="panorama">
+<div id="app" class="app">
+  <div class="statusbar"><span>social hub</span><span>‹ ›</span></div>
+  <div id="viewport" class="viewport">
+<div id="panorama" class="panorama">
 
   <header class="brand-page">
     <div class="brand">social hub</div>
@@ -87,5 +90,54 @@
   </section>
 
 </div>
+  </div>
+  <div class="gesture-hint">desliza para mudar de ecrã</div>
+</div>
+
+<script>
+(function(){
+  var viewport = document.getElementById('viewport');
+  var panorama = document.getElementById('panorama');
+  var panels = document.getElementsByClassName('panel');
+  var startX = 0, startScroll = 0, dragging = false;
+
+  function goTo(n){
+    if(n < 0) n = 0;
+    if(n > panels.length - 1) n = panels.length - 1;
+    viewport.scrollLeft = n * 320;
+  }
+
+  function down(x){
+    startX = x;
+    startScroll = viewport.scrollLeft;
+    dragging = true;
+  }
+
+  function up(x){
+    if(!dragging) return;
+    dragging = false;
+    var dx = x - startX;
+    var current = Math.round(startScroll / 320);
+    if(dx < -45) current++;
+    if(dx > 45) current--;
+    goTo(current);
+  }
+
+  if(window.PointerEvent){
+    viewport.addEventListener('pointerdown', function(e){ down(e.clientX); });
+    viewport.addEventListener('pointerup', function(e){ up(e.clientX); });
+    viewport.addEventListener('pointercancel', function(){ dragging=false; });
+  }
+  viewport.attachEvent && viewport.attachEvent('MSPointerDown', function(e){ down(e.clientX); });
+  viewport.attachEvent && viewport.attachEvent('MSPointerUp', function(e){ up(e.clientX); });
+
+  var nav = document.getElementsByClassName('pivot');
+  for(var i=0;i<nav.length;i++){
+    (function(n){
+      nav[n].onclick = function(){ goTo(n); };
+    })(i);
+  }
+})();
+</script>
 </body>
 </html>
