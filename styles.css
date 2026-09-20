@@ -37,23 +37,21 @@ text-transform:uppercase;
 position:absolute;
 top:0;left:0;
 width:320px;height:450px;
-overflow-x:scroll;
-overflow-y:hidden;
--webkit-overflow-scrolling:touch;
--ms-touch-action:pan-x;
-touch-action:pan-x;
-scrollbar-width:none;
+overflow:hidden;
+-ms-touch-action:none;
+touch-action:none;
 }
 .viewport::-webkit-scrollbar{display:none}
 
 .panorama{
 width:960px;
 height:450px;
+position:absolute;
+left:0;top:0;
 display:block;
-position:relative;
 }
 
-.brand-page,.panel{
+.panel{
 width:320px;
 height:450px;
 min-height:450px;
@@ -63,9 +61,7 @@ overflow:hidden;
 position:relative;
 }
 
-.brand-page{
-padding:52px 18px 0 0;
-}
+
 .brand{
 font-size:64px;
 line-height:.82;
@@ -186,5 +182,5 @@ z-index:40;
 }
 
 @media(max-width:430px){
-  .brand-page,.panel{width:320px;min-width:320px;max-width:320px}
+  .panel{width:320px;min-width:320px;max-width:320px}
 }
