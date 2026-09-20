@@ -12,18 +12,15 @@
   <div id="viewport" class="viewport">
 <div id="panorama" class="panorama">
 
-  <header class="brand-page">
-    <div class="brand">social hub</div>
-    <div class="brand-sub">LUMIA 830</div>
-  </header>
-
-  <nav class="pivot-nav">
+    <nav class="pivot-nav">
     <a class="pivot current" href="#social">social hub</a>
     <a class="pivot" href="#sources">fontes</a>
     <a class="pivot" href="#recent">mais recentes</a>
   </nav>
 
   <section id="social" class="panel panel-home">
+    <div class="brand">social hub</div>
+    <div class="brand-sub">LUMIA 830</div>
     <div class="panel-title">o teu mundo</div>
     <p class="intro">Tudo o que acompanhas,<br>num só lugar.</p>
 
@@ -99,44 +96,69 @@
   var viewport = document.getElementById('viewport');
   var panorama = document.getElementById('panorama');
   var panels = document.getElementsByClassName('panel');
-  var startX = 0, startScroll = 0, dragging = false;
+  var startX = 0, current = 0, dragging = false, moved = false;
 
-  function goTo(n){
+  function render(n){
     if(n < 0) n = 0;
     if(n > panels.length - 1) n = panels.length - 1;
-    viewport.scrollLeft = n * 320;
+    current = n;
+    panorama.style.left = (-320 * current) + 'px';
+    viewport.scrollLeft = 0;
   }
 
   function down(x){
     startX = x;
-    startScroll = viewport.scrollLeft;
+    moved = false;
     dragging = true;
+  }
+
+  function move(x){
+    if(!dragging) return;
+    var dx = x - startX;
+    if(Math.abs(dx) > 8) moved = true;
+    var pos = (-320 * current) + dx;
+    if(pos > 0) pos = pos / 3;
+    if(pos < -320 * (panels.length - 1)) pos = (-320 * (panels.length - 1)) + (dx / 3);
+    panorama.style.left = pos + 'px';
   }
 
   function up(x){
     if(!dragging) return;
     dragging = false;
     var dx = x - startX;
-    var current = Math.round(startScroll / 320);
     if(dx < -45) current++;
     if(dx > 45) current--;
-    goTo(current);
+    render(current);
   }
 
+  function downHandler(e){ down(e.clientX); }
+  function moveHandler(e){ if(dragging) { move(e.clientX); e.preventDefault(); } }
+  function upHandler(e){ up(e.clientX); }
+
   if(window.PointerEvent){
-    viewport.addEventListener('pointerdown', function(e){ down(e.clientX); });
-    viewport.addEventListener('pointerup', function(e){ up(e.clientX); });
-    viewport.addEventListener('pointercancel', function(){ dragging=false; });
+    viewport.addEventListener('pointerdown', downHandler);
+    viewport.addEventListener('pointermove', moveHandler);
+    viewport.addEventListener('pointerup', upHandler);
+    viewport.addEventListener('pointercancel', function(){ dragging=false; render(current); });
   }
-  viewport.attachEvent && viewport.attachEvent('MSPointerDown', function(e){ down(e.clientX); });
-  viewport.attachEvent && viewport.attachEvent('MSPointerUp', function(e){ up(e.clientX); });
+  if(viewport.attachEvent){
+    viewport.attachEvent('MSPointerDown', downHandler);
+    viewport.attachEvent('MSPointerMove', moveHandler);
+    viewport.attachEvent('MSPointerUp', upHandler);
+  }
 
   var nav = document.getElementsByClassName('pivot');
   for(var i=0;i<nav.length;i++){
     (function(n){
-      nav[n].onclick = function(){ goTo(n); };
+      nav[n].onclick = function(e){
+        if(moved){ if(e && e.preventDefault) e.preventDefault(); return false; }
+        render(n);
+        return false;
+      };
     })(i);
   }
+
+  render(0);
 })();
 </script>
 </body>
