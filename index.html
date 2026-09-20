@@ -10,12 +10,12 @@
 <div id="app" class="app">
   <div class="statusbar"><span>social hub</span><span>‹ ›</span></div>
   <div id="viewport" class="viewport">
+<div id="panorama" class="panorama">
   <nav class="pivot-nav">
     <a class="pivot current" href="#social">social hub</a>
     <a class="pivot" href="#sources">fontes</a>
     <a class="pivot" href="#recent">mais recentes</a>
   </nav>
-<div id="panorama" class="panorama">
 
   <section id="social" class="panel panel-home">
     <div class="brand">social hub</div>
@@ -24,18 +24,18 @@
     <p class="intro">Tudo o que acompanhas,<br>num só lugar.</p>
 
     <div class="tile-grid">
-      <a class="tile tile-cyber" data-source="cyber" href="/api/feed?source=cyber"><b>⌁</b><strong>CYBER</strong><small>segurança</small><em>...</em></a>
-      <a class="tile tile-legacy" data-source="legacy" href="/api/feed?source=legacy"><b>▣</b><strong>LEGACY</strong><small>tecnologia</small><em>...</em></a>
-      <a class="tile tile-world" data-source="world" href="/api/feed?source=world"><b>◎</b><strong>MUNDO</strong><small>Rússia · Ucrânia</small><em>...</em></a>
-      <a class="tile tile-football" data-source="football" href="/api/feed?source=football"><b>◈</b><strong>FUTEBOL</strong><small>notícias</small><em>...</em></a>
-      <a class="tile tile-cycling" data-source="cycling" href="/api/feed?source=cycling"><b>↗</b><strong>CICLISMO</strong><small>corridas</small><em>...</em></a>
-      <a class="tile tile-cardputer" data-source="cardputer" href="/api/feed?source=cardputer"><b>▤</b><strong>CARDPUTER</strong><small>M5Stack</small><em>...</em></a>
+      <a class="tile tile-cyber" data-source="cyber" href="/api/feed?source=cyber"><span class="tile-code">CY</span><strong>CYBER</strong><small>segurança</small><em>...</em></a>
+      <a class="tile tile-legacy" data-source="legacy" href="/api/feed?source=legacy"><span class="tile-code">LG</span><strong>LEGACY</strong><small>tecnologia</small><em>...</em></a>
+      <a class="tile tile-world" data-source="world" href="/api/feed?source=world"><span class="tile-code">WO</span><strong>MUNDO</strong><small>Rússia · Ucrânia</small><em>...</em></a>
+      <a class="tile tile-football" data-source="football" href="/api/feed?source=football"><span class="tile-code">FB</span><strong>FUTEBOL</strong><small>notícias</small><em>...</em></a>
+      <a class="tile tile-cycling" data-source="cycling" href="/api/feed?source=cycling"><span class="tile-code">CY</span><strong>CICLISMO</strong><small>corridas</small><em>...</em></a>
+      <a class="tile tile-cardputer" data-source="cardputer" href="/api/feed?source=cardputer"><span class="tile-code">M5</span><strong>CARDPUTER</strong><small>M5Stack</small><em>...</em></a>
     </div>
     <div class="home-status"><span class="live-dot">●</span> CLOUD ONLINE <span>·</span> RSS ACTIVE <span>·</span> <b id="last-update">a atualizar</b></div>
   </section>
 
   <section id="sources" class="panel panel-sources">
-    <div class="panel-title">fontes</div>
+    <div class="section-kicker">as tuas</div><div class="panel-title">fontes</div>
     <p class="intro">As tuas fontes,<br>num só lugar.</p>
     <div class="source-count">09 FONTES · CLOUD</div>
     <div class="source-list">
@@ -52,7 +52,7 @@
   </section>
 
   <section id="recent" class="panel panel-recent">
-    <div class="panel-title">mais recentes</div>
+    <div class="section-kicker">agora</div><div class="panel-title">mais recentes</div>
     <p class="intro">O que aconteceu<br>agora.</p>
     <div class="recent-live"><span class="live-dot">●</span> FEED AO VIVO <span>·</span> ATUALIZAÇÃO CLOUD <b id="recent-state">a ligar...</b></div>
 
