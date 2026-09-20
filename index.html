@@ -24,14 +24,14 @@
     <p class="intro">Tudo o que acompanhas,<br>num só lugar.</p>
 
     <div class="tile-grid">
-      <a class="tile tile-cyber" href="/api/feed?source=cyber"><b>⌁</b><strong>CYBER</strong><small>segurança</small></a>
-      <a class="tile tile-legacy" href="/api/feed?source=legacy"><b>▣</b><strong>LEGACY</strong><small>tecnologia</small></a>
-      <a class="tile tile-world" href="/api/feed?source=world"><b>◎</b><strong>MUNDO</strong><small>Rússia · Ucrânia</small></a>
-      <a class="tile tile-football" href="/api/feed?source=football"><b>◈</b><strong>FUTEBOL</strong><small>notícias</small></a>
-      <a class="tile tile-cycling" href="/api/feed?source=cycling"><b>↗</b><strong>CICLISMO</strong><small>corridas</small></a>
-      <a class="tile tile-cardputer" href="/api/feed?source=cardputer"><b>▤</b><strong>CARDPUTER</strong><small>M5Stack</small></a>
+      <a class="tile tile-cyber" data-source="cyber" href="/api/feed?source=cyber"><b>⌁</b><strong>CYBER</strong><small>segurança</small><em>...</em></a>
+      <a class="tile tile-legacy" data-source="legacy" href="/api/feed?source=legacy"><b>▣</b><strong>LEGACY</strong><small>tecnologia</small><em>...</em></a>
+      <a class="tile tile-world" data-source="world" href="/api/feed?source=world"><b>◎</b><strong>MUNDO</strong><small>Rússia · Ucrânia</small><em>...</em></a>
+      <a class="tile tile-football" data-source="football" href="/api/feed?source=football"><b>◈</b><strong>FUTEBOL</strong><small>notícias</small><em>...</em></a>
+      <a class="tile tile-cycling" data-source="cycling" href="/api/feed?source=cycling"><b>↗</b><strong>CICLISMO</strong><small>corridas</small><em>...</em></a>
+      <a class="tile tile-cardputer" data-source="cardputer" href="/api/feed?source=cardputer"><b>▤</b><strong>CARDPUTER</strong><small>M5Stack</small><em>...</em></a>
     </div>
-    <div class="home-status"><span class="live-dot">●</span> CLOUD ONLINE <span>·</span> RSS ACTIVE</div>
+    <div class="home-status"><span class="live-dot">●</span> CLOUD ONLINE <span>·</span> RSS ACTIVE <span>·</span> <b id="last-update">a atualizar</b></div>
   </section>
 
   <section id="sources" class="panel panel-sources">
@@ -54,7 +54,7 @@
   <section id="recent" class="panel panel-recent">
     <div class="panel-title">mais recentes</div>
     <p class="intro">O que aconteceu<br>agora.</p>
-    <div class="recent-live"><span class="live-dot">●</span> FEED AO VIVO <span>·</span> ATUALIZAÇÃO CLOUD</div>
+    <div class="recent-live"><span class="live-dot">●</span> FEED AO VIVO <span>·</span> ATUALIZAÇÃO CLOUD <b id="recent-state">a ligar...</b></div>
 
     <a class="recent-item" href="/api/feed?source=all">
       <span class="recent-source">TIMELINE</span>
@@ -163,6 +163,44 @@
   }
 
   render(0);
+
+  function cleanTitle(v){
+    return String(v || "").replace(/&amp;/g,"&").replace(/&quot;/g,'"')
+      .replace(/&#39;/g,"'").replace(/&lt;/g,"<").replace(/&gt;/g,">");
+  }
+
+  function loadTile(tile){
+    var source=tile.getAttribute("data-source");
+    var xhr=new XMLHttpRequest();
+    xhr.open("GET","/api/feed?source="+source,true);
+    xhr.onreadystatechange=function(){
+      if(xhr.readyState!==4) return;
+      var count=0, title="";
+      if(xhr.status>=200 && xhr.status<300){
+        var matches=xhr.responseText.match(/<article class='card'>[\\s\\S]*?<h2><a[^>]*>([\\s\\S]*?)<\\/a><\\/h2>/gi) || [];
+        count=matches.length;
+        if(matches.length){
+          var m=matches[0].match(/<h2><a[^>]*>([\\s\\S]*?)<\\/a><\\/h2>/i);
+          title=cleanTitle(m ? m[1].replace(/<[^>]*>/g,"") : "");
+        }
+      }
+      var em=tile.getElementsByTagName("em")[0];
+      if(em) em.innerHTML=count ? count+" itens" : "offline";
+      if(title) tile.title=title;
+    };
+    xhr.send(null);
+  }
+
+  var tiles=document.getElementsByClassName("tile");
+  for(var t=0;t<tiles.length;t++) loadTile(tiles[t]);
+
+  var state=document.getElementById("recent-state");
+  if(state) state.innerHTML=" a atualizar";
+  window.setTimeout(function(){
+    if(state) state.innerHTML=" ligado";
+    var u=document.getElementById("last-update");
+    if(u) u.innerHTML="agora";
+  },5000);
 })();
 </script>
 </body>
