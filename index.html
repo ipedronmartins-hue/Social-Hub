@@ -1,95 +1,87 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Social Hub — People Hub para Windows Phone">
-  <title>Social Hub</title>
-  <link rel="stylesheet" href="/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Social Hub — People Hub para Windows Phone">
+<title>Social Hub</title>
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<div class="page">
-<header class="header">
-  <div class="brand">SOCIAL HUB</div>
-  <div class="subtitle">LUMIA 830</div>
+<div class="app">
+
+<header class="topbar">
+  <div class="topbar-title">SOCIAL HUB</div>
+  <div class="topbar-sub">LUMIA 830</div>
 </header>
 
 <main>
-<section class="hero">
-  <div class="eyebrow">PEOPLE</div>
-  <h1>O teu mundo,<br>num só lugar.</h1>
-  <p>Tecnologia, legacy, segurança, mundo, futebol e ciclismo — preparados na cloud para o teu Lumia.</p>
+<section class="welcome">
+  <div class="kicker">PEOPLE</div>
+  <h1>O teu mundo,<br><span>num só lugar.</span></h1>
+  <p>Tecnologia, mundo, segurança, desporto e legacy.</p>
 </section>
 
-<section class="tiles">
-  <a class="tile tile-red" href="/api/feed?source=cyber">
-    <span class="tile-icon">●</span>
-    <span class="tile-title">CYBER</span>
-    <span class="tile-text">Hacking & segurança</span>
-  </a>
-
-  <a class="tile tile-blue" href="/api/feed?source=legacy">
-    <span class="tile-icon">◼</span>
-    <span class="tile-title">LEGACY</span>
-    <span class="tile-text">Windows · BlackBerry · OS</span>
-  </a>
-
-  <a class="tile tile-dark" href="/api/feed?source=world">
-    <span class="tile-icon">◎</span>
-    <span class="tile-title">MUNDO</span>
-    <span class="tile-text">Rússia · Ucrânia</span>
-  </a>
-
-  <a class="tile tile-gold" href="/api/feed?source=football">
-    <span class="tile-icon">⚽</span>
-    <span class="tile-title">FUTEBOL</span>
-    <span class="tile-text">Últimas notícias</span>
-  </a>
-
-  <a class="tile tile-green" href="/api/feed?source=cycling">
-    <span class="tile-icon">●</span>
-    <span class="tile-title">CICLISMO</span>
-    <span class="tile-text">Cyclingnews</span>
-  </a>
-
-  <a class="tile tile-purple" href="/api/feed?source=cardputer">
-    <span class="tile-icon">▣</span>
-    <span class="tile-title">CARDPUTER</span>
-    <span class="tile-text">M5Stack · maker</span>
-  </a>
-
-  <a class="tile tile-red" href="/api/feed?source=reddit">
-    <span class="tile-icon">●</span>
-    <span class="tile-title">REDDIT</span>
-    <span class="tile-text">r/portugal</span>
-  </a>
-
-  <a class="tile tile-blue" href="/api/feed?source=all">
-    <span class="tile-icon">★</span>
-    <span class="tile-title">TIMELINE</span>
-    <span class="tile-text">Tudo junto</span>
-  </a>
+<section class="pivot">
+  <div class="pivot-label">ASSUNTOS</div>
+  <div class="pivot-strip">
+    <a class="pivot-item active" href="/api/feed?source=all">TUDO</a>
+    <a class="pivot-item" href="/api/feed?source=cyber">CYBER</a>
+    <a class="pivot-item" href="/api/feed?source=legacy">LEGACY</a>
+    <a class="pivot-item" href="/api/feed?source=world">MUNDO</a>
+    <a class="pivot-item" href="/api/feed?source=football">FUTEBOL</a>
+    <a class="pivot-item" href="/api/feed?source=cycling">CICLISMO</a>
+    <a class="pivot-item" href="/api/feed?source=cardputer">CARDPUTER</a>
+    <a class="pivot-item" href="/api/feed?source=reddit">REDDIT</a>
+  </div>
 </section>
 
-<section class="feed">
-  <div class="section-title">SISTEMA</div>
-  <article class="card">
-    <div class="card-source">CLOUD</div>
-    <h2>People Hub reativado.</h2>
-    <p>O Lumia recebe conteúdos atuais através do Cloudflare e do backend, sem depender de JavaScript moderno no telefone.</p>
-    <div class="card-time">ONLINE</div>
-  </article>
+<section class="featured">
+  <div class="feature-main">
+    <div class="feature-mark">★</div>
+    <div class="feature-kicker">TIMELINE</div>
+    <div class="feature-title">Tudo o que<br>te interessa.</div>
+    <a class="feature-action" href="/api/feed?source=all">ABRIR TIMELINE →</a>
+  </div>
+  <div class="feature-side">
+    <a href="/api/feed?source=cyber"><strong>CYBER</strong><span>Segurança · hacking</span></a>
+    <a href="/api/feed?source=legacy"><strong>LEGACY</strong><span>Windows · BlackBerry</span></a>
+    <a href="/api/feed?source=cardputer"><strong>CARDPUTER</strong><span>M5Stack · maker</span></a>
+  </div>
+</section>
 
-  <article class="card">
-    <div class="card-source">LEGACY MODE</div>
-    <h2>Feito para hardware antigo.</h2>
-    <p>HTML simples, CSS compatível e processamento remoto. O objetivo é fazer tecnologia moderna chegar a sistemas que já foram abandonados.</p>
-    <div class="card-time">WP8.1</div>
-  </article>
+<section class="sources">
+  <div class="section-head">
+    <span>FONTES</span><small>desliza →</small>
+  </div>
+  <div class="source-strip">
+    <a href="/api/feed?source=cyber" class="source-card red"><b>THN</b><span>The Hacker News</span></a>
+    <a href="/api/feed?source=cyber" class="source-card orange"><b>BC</b><span>BleepingComputer</span></a>
+    <a href="/api/feed?source=world" class="source-card blue"><b>G</b><span>The Guardian</span></a>
+    <a href="/api/feed?source=news" class="source-card dark"><b>RTP</b><span>RTP Notícias</span></a>
+    <a href="/api/feed?source=cycling" class="source-card green"><b>CN</b><span>Cyclingnews</span></a>
+    <a href="/api/feed?source=cardputer" class="source-card purple"><b>M5</b><span>M5Stack / Cardputer</span></a>
+  </div>
+</section>
+
+<section class="quick">
+  <div class="section-head"><span>AGORA</span></div>
+  <div class="quick-grid">
+    <a href="/api/feed?source=football"><b>⚽</b><span>FUTEBOL</span><small>Notícias</small></a>
+    <a href="/api/feed?source=cycling"><b>●</b><span>CICLISMO</span><small>Corridas</small></a>
+    <a href="/api/feed?source=world"><b>◎</b><span>RÚSSIA / UCRÂNIA</span><small>Mundo</small></a>
+    <a href="/api/feed?source=legacy"><b>▣</b><span>LEGACY</span><small>OS · hardware</small></a>
+  </div>
+</section>
+
+<section class="system-card">
+  <div class="system-title">LUMIA MODE</div>
+  <p>Conteúdo moderno. Interface antiga. Processamento na cloud.</p>
+  <span>HTTPS · CLOUD · WP8.1</span>
 </section>
 </main>
 
-<footer>SOCIAL HUB · 2026</footer>
+<footer>SOCIAL HUB <span>·</span> 2026</footer>
 </div>
 </body>
 </html>
