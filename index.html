@@ -3,85 +3,82 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Social Hub — People Hub para Windows Phone">
 <title>Social Hub</title>
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<div class="app">
+<div class="panorama">
 
-<header class="topbar">
-  <div class="topbar-title">SOCIAL HUB</div>
-  <div class="topbar-sub">LUMIA 830</div>
-</header>
+  <header class="brand-page">
+    <div class="brand">social hub</div>
+    <div class="brand-sub">LUMIA 830</div>
+  </header>
 
-<main>
-<section class="welcome">
-  <div class="kicker">PEOPLE</div>
-  <h1>O teu mundo,<br><span>num só lugar.</span></h1>
-  <p>Tecnologia, mundo, segurança, desporto e legacy.</p>
-</section>
+  <nav class="pivot-nav">
+    <a class="pivot current" href="#social">social hub</a>
+    <a class="pivot" href="#sources">fontes</a>
+    <a class="pivot" href="#recent">mais recentes</a>
+  </nav>
 
-<section class="pivot">
-  <div class="pivot-label">ASSUNTOS</div>
-  <div class="pivot-strip">
-    <a class="pivot-item active" href="/api/feed?source=all">TUDO</a>
-    <a class="pivot-item" href="/api/feed?source=cyber">CYBER</a>
-    <a class="pivot-item" href="/api/feed?source=legacy">LEGACY</a>
-    <a class="pivot-item" href="/api/feed?source=world">MUNDO</a>
-    <a class="pivot-item" href="/api/feed?source=football">FUTEBOL</a>
-    <a class="pivot-item" href="/api/feed?source=cycling">CICLISMO</a>
-    <a class="pivot-item" href="/api/feed?source=cardputer">CARDPUTER</a>
-    <a class="pivot-item" href="/api/feed?source=reddit">REDDIT</a>
-  </div>
-</section>
+  <section id="social" class="panel panel-home">
+    <div class="panel-title">o teu mundo</div>
+    <p class="intro">Tudo o que acompanhas,<br>num só lugar.</p>
 
-<section class="featured">
-  <div class="feature-main">
-    <div class="feature-mark">★</div>
-    <div class="feature-kicker">TIMELINE</div>
-    <div class="feature-title">Tudo o que<br>te interessa.</div>
-    <a class="feature-action" href="/api/feed?source=all">ABRIR TIMELINE →</a>
-  </div>
-  <div class="feature-side">
-    <a href="/api/feed?source=cyber"><strong>CYBER</strong><span>Segurança · hacking</span></a>
-    <a href="/api/feed?source=legacy"><strong>LEGACY</strong><span>Windows · BlackBerry</span></a>
-    <a href="/api/feed?source=cardputer"><strong>CARDPUTER</strong><span>M5Stack · maker</span></a>
-  </div>
-</section>
+    <div class="category-row">
+      <a href="/api/feed?source=cyber"><span>CYBER</span><small>segurança · hacking</small></a>
+      <a href="/api/feed?source=legacy"><span>LEGACY</span><small>Windows · BlackBerry</small></a>
+      <a href="/api/feed?source=world"><span>MUNDO</span><small>Rússia · Ucrânia</small></a>
+      <a href="/api/feed?source=football"><span>FUTEBOL</span><small>notícias · jogos</small></a>
+      <a href="/api/feed?source=cycling"><span>CICLISMO</span><small>corridas · notícias</small></a>
+      <a href="/api/feed?source=cardputer"><span>CARDPUTER</span><small>M5Stack · maker</small></a>
+    </div>
+  </section>
 
-<section class="sources">
-  <div class="section-head">
-    <span>FONTES</span><small>desliza →</small>
-  </div>
-  <div class="source-strip">
-    <a href="/api/feed?source=cyber" class="source-card red"><b>THN</b><span>The Hacker News</span></a>
-    <a href="/api/feed?source=cyber" class="source-card orange"><b>BC</b><span>BleepingComputer</span></a>
-    <a href="/api/feed?source=world" class="source-card blue"><b>G</b><span>The Guardian</span></a>
-    <a href="/api/feed?source=news" class="source-card dark"><b>RTP</b><span>RTP Notícias</span></a>
-    <a href="/api/feed?source=cycling" class="source-card green"><b>CN</b><span>Cyclingnews</span></a>
-    <a href="/api/feed?source=cardputer" class="source-card purple"><b>M5</b><span>M5Stack / Cardputer</span></a>
-  </div>
-</section>
+  <section id="sources" class="panel panel-sources">
+    <div class="panel-title">fontes</div>
+    <p class="intro">As tuas fontes,<br>num só lugar.</p>
 
-<section class="quick">
-  <div class="section-head"><span>AGORA</span></div>
-  <div class="quick-grid">
-    <a href="/api/feed?source=football"><b>⚽</b><span>FUTEBOL</span><small>Notícias</small></a>
-    <a href="/api/feed?source=cycling"><b>●</b><span>CICLISMO</span><small>Corridas</small></a>
-    <a href="/api/feed?source=world"><b>◎</b><span>RÚSSIA / UCRÂNIA</span><small>Mundo</small></a>
-    <a href="/api/feed?source=legacy"><b>▣</b><span>LEGACY</span><small>OS · hardware</small></a>
-  </div>
-</section>
+    <div class="source-list">
+      <a href="/api/feed?source=cyber"><b>THN</b><span>The Hacker News</span></a>
+      <a href="/api/feed?source=cyber"><b>BC</b><span>BleepingComputer</span></a>
+      <a href="/api/feed?source=cyber"><b>K</b><span>Krebs on Security</span></a>
+      <a href="/api/feed?source=world"><b>G</b><span>The Guardian</span></a>
+      <a href="/api/feed?source=news"><b>RTP</b><span>RTP Notícias</span></a>
+      <a href="/api/feed?source=cycling"><b>CN</b><span>Cyclingnews</span></a>
+      <a href="/api/feed?source=cardputer"><b>M5</b><span>M5Stack / Cardputer</span></a>
+      <a href="/api/feed?source=reddit"><b>R</b><span>Reddit</span></a>
+    </div>
+  </section>
 
-<section class="system-card">
-  <div class="system-title">LUMIA MODE</div>
-  <p>Conteúdo moderno. Interface antiga. Processamento na cloud.</p>
-  <span>HTTPS · CLOUD · WP8.1</span>
-</section>
-</main>
+  <section id="recent" class="panel panel-recent">
+    <div class="panel-title">mais recentes</div>
+    <p class="intro">O que aconteceu<br>agora.</p>
 
-<footer>SOCIAL HUB <span>·</span> 2026</footer>
+    <a class="recent-item" href="/api/feed?source=all">
+      <span class="recent-source">TIMELINE</span>
+      <strong>Ver todas as novidades</strong>
+      <small>Cyber · Legacy · Mundo · Futebol · Ciclismo · Cardputer</small>
+    </a>
+
+    <a class="recent-item" href="/api/feed?source=cyber">
+      <span class="recent-source">CYBER</span>
+      <strong>Últimas notícias de segurança</strong>
+      <small>Hacking · vulnerabilidades · tecnologia</small>
+    </a>
+
+    <a class="recent-item" href="/api/feed?source=football">
+      <span class="recent-source">FUTEBOL</span>
+      <strong>Últimas notícias do futebol</strong>
+      <small>Notícias e desporto</small>
+    </a>
+
+    <a class="recent-item" href="/api/feed?source=cycling">
+      <span class="recent-source">CICLISMO</span>
+      <strong>Últimas do ciclismo</strong>
+      <small>Corridas · equipas · mercado</small>
+    </a>
+  </section>
+
 </div>
 </body>
 </html>
