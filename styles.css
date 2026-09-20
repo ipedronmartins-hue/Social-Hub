@@ -177,3 +177,26 @@ footer a {
   .hero h1 { font-size: 34px; }
   .tile { width: 100%; }
 }
+.reader h1 {
+  margin: 0 0 26px;
+  font-size: 34px;
+  line-height: 1.12;
+  font-weight: 300;
+}
+
+.reader-body {
+  font-size: 18px;
+  line-height: 1.58;
+}
+
+.reader-body p {
+  margin: 0 0 22px;
+}
+
+.reader-note {
+  margin-top: 30px;
+  padding-top: 14px;
+  border-top: 1px solid #444444;
+  font-size: 12px;
+  opacity: .55;
+}
