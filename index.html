@@ -10,34 +10,34 @@
 <div id="app" class="app">
   <div class="statusbar"><span>social hub</span><span>‹ ›</span></div>
   <div id="viewport" class="viewport">
-<div id="panorama" class="panorama">
-
-    <nav class="pivot-nav">
+  <nav class="pivot-nav">
     <a class="pivot current" href="#social">social hub</a>
     <a class="pivot" href="#sources">fontes</a>
     <a class="pivot" href="#recent">mais recentes</a>
   </nav>
+<div id="panorama" class="panorama">
 
   <section id="social" class="panel panel-home">
     <div class="brand">social hub</div>
-    <div class="brand-sub">LUMIA 830</div>
-    <div class="panel-title">o teu mundo</div>
+    <div class="brand-sub">LUMIA 830 · ONLINE</div>
+    <div class="home-kicker">o teu mundo</div>
     <p class="intro">Tudo o que acompanhas,<br>num só lugar.</p>
 
-    <div class="category-row">
-      <a href="/api/feed?source=cyber"><span>CYBER</span><small>segurança · hacking</small></a>
-      <a href="/api/feed?source=legacy"><span>LEGACY</span><small>Windows · BlackBerry</small></a>
-      <a href="/api/feed?source=world"><span>MUNDO</span><small>Rússia · Ucrânia</small></a>
-      <a href="/api/feed?source=football"><span>FUTEBOL</span><small>notícias · jogos</small></a>
-      <a href="/api/feed?source=cycling"><span>CICLISMO</span><small>corridas · notícias</small></a>
-      <a href="/api/feed?source=cardputer"><span>CARDPUTER</span><small>M5Stack · maker</small></a>
+    <div class="tile-grid">
+      <a class="tile tile-cyber" href="/api/feed?source=cyber"><b>⌁</b><strong>CYBER</strong><small>segurança</small></a>
+      <a class="tile tile-legacy" href="/api/feed?source=legacy"><b>▣</b><strong>LEGACY</strong><small>tecnologia</small></a>
+      <a class="tile tile-world" href="/api/feed?source=world"><b>◎</b><strong>MUNDO</strong><small>Rússia · Ucrânia</small></a>
+      <a class="tile tile-football" href="/api/feed?source=football"><b>◈</b><strong>FUTEBOL</strong><small>notícias</small></a>
+      <a class="tile tile-cycling" href="/api/feed?source=cycling"><b>↗</b><strong>CICLISMO</strong><small>corridas</small></a>
+      <a class="tile tile-cardputer" href="/api/feed?source=cardputer"><b>▤</b><strong>CARDPUTER</strong><small>M5Stack</small></a>
     </div>
+    <div class="home-status"><span class="live-dot">●</span> CLOUD ONLINE <span>·</span> RSS ACTIVE</div>
   </section>
 
   <section id="sources" class="panel panel-sources">
     <div class="panel-title">fontes</div>
     <p class="intro">As tuas fontes,<br>num só lugar.</p>
-
+    <div class="source-count">09 FONTES · CLOUD</div>
     <div class="source-list">
       <a href="/api/feed?source=cyber"><b>THN</b><span>The Hacker News</span></a>
       <a href="/api/feed?source=cyber"><b>BC</b><span>BleepingComputer</span></a>
@@ -54,6 +54,7 @@
   <section id="recent" class="panel panel-recent">
     <div class="panel-title">mais recentes</div>
     <p class="intro">O que aconteceu<br>agora.</p>
+    <div class="recent-live"><span class="live-dot">●</span> FEED AO VIVO <span>·</span> ATUALIZAÇÃO CLOUD</div>
 
     <a class="recent-item" href="/api/feed?source=all">
       <span class="recent-source">TIMELINE</span>
@@ -88,7 +89,10 @@
 
 </div>
   </div>
-  <div class="gesture-hint">desliza para mudar de ecrã</div>
+  <div class="appbar">
+  <span>●</span><span>↻</span><span>⋯</span>
+</div>
+<div class="gesture-hint">desliza para mudar de ecrã</div>
 </div>
 
 <script>
