@@ -6,7 +6,8 @@ font-family:"Segoe WP","Segoe UI",Arial,sans-serif;
 *{box-sizing:border-box}
 html{scroll-behavior:auto}
 body{min-width:320px;overflow-x:auto}
-@viewport{width:device-width;zoom:1}
+@-ms-viewport{width:320px}
+@viewport{width:320px;zoom:1}
 
 a{color:#fff;text-decoration:none}
 
@@ -17,12 +18,12 @@ height:auto;
 display:flex;
 flex-wrap:nowrap;
 align-items:flex-start;
-padding:0 0 45px 22px;
+padding:0 0 45px 0;
 }
 
 .brand-page{
-width:360px;
-flex:0 0 360px;
+width:320px;
+flex:0 0 320px;
 padding:45px 18px 0 0;
 }
 .brand{
@@ -40,7 +41,7 @@ letter-spacing:4px;color:#777;margin-top:24px;
 .pivot-nav{
 position:absolute;
 top:142px;
-left:22px;
+left:0;
 z-index:10;
 display:flex;
 gap:34px;
@@ -54,10 +55,10 @@ white-space:nowrap;
 .pivot.current{color:#fff}
 
 .panel{
-width:360px;
-flex:0 0 360px;
+width:320px;
+flex:0 0 320px;
 min-height:650px;
-padding:40px 24px 20px 0;
+padding:40px 16px 20px 0;
 scroll-margin-left:22px;
 }
 .panel-title{
@@ -79,7 +80,7 @@ color:#ddd;
 display:flex;
 flex-direction:column;
 gap:0;
-width:300px;
+width:292px;
 }
 .category-row a{
 display:block;
@@ -94,7 +95,7 @@ display:block;font-size:12px;color:#777;margin-top:4px;
 }
 
 .source-list{
-width:310px;
+width:292px;
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:2px;
@@ -112,7 +113,7 @@ display:block;font-size:11px;color:#999;margin-top:9px;line-height:1.2;
 }
 
 .recent-item{
-display:block;width:310px;
+display:block;width:292px;
 padding:18px 12px 19px 0;
 border-bottom:1px solid #292929;
 }
@@ -135,11 +136,11 @@ width:auto;min-width:320px;max-width:720px;margin:auto;padding:0 18px 40px;
 .reader-note{margin-top:30px;padding-top:14px;border-top:1px solid #444;font-size:12px;opacity:.55}
 
 @media(max-width:430px){
-.brand-page{width:315px;flex-basis:315px}
-.panel{width:315px;flex-basis:315px;padding-right:18px}
+.brand-page{width:320px;flex-basis:320px}
+.panel{width:320px;flex-basis:320px;padding-right:14px}
 .brand{font-size:64px}
 .pivot-nav{gap:25px}
 .pivot{font-size:21px}
 .panel-title{font-size:43px}
-.category-row,.source-list,.recent-item{width:285px}
+.category-row,.source-list,.recent-item{width:292px}
 }
