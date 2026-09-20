@@ -1,0 +1,171 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #111111;
+  color: #ffffff;
+  font-family: "Segoe WP", "Segoe UI", Arial, sans-serif;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  min-width: 320px;
+}
+
+.page {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+  box-sizing: border-box;
+}
+
+.header {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 14px;
+  margin-bottom: 28px;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  margin-top: 4px;
+  font-size: 13px;
+  opacity: .65;
+  letter-spacing: 2px;
+}
+
+.eyebrow {
+  font-size: 14px;
+  letter-spacing: 3px;
+  opacity: .65;
+  margin-bottom: 8px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.05;
+  font-weight: 300;
+}
+
+.hero p {
+  font-size: 17px;
+  line-height: 1.45;
+  opacity: .75;
+  margin: 14px 0 26px;
+}
+
+.tiles {
+  margin: 0 -5px 34px;
+  overflow: hidden;
+}
+
+.tile {
+  display: block;
+  float: left;
+  width: 50%;
+  min-height: 132px;
+  box-sizing: border-box;
+  padding: 18px;
+  margin: 0 0 10px;
+  border: 5px solid #111111;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.tile-red { background: #c92828; }
+.tile-blue { background: #1468a8; }
+.tile-dark { background: #303030; }
+.tile-gold { background: #a47700; }
+
+.tile-icon {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.tile-title {
+  display: block;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.tile-text {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  opacity: .8;
+}
+
+.feed {
+  clear: both;
+}
+
+.section-title {
+  font-size: 15px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+  opacity: .7;
+}
+
+.card {
+  background: #202020;
+  border-left: 5px solid #ffffff;
+  padding: 17px 18px;
+  margin-bottom: 10px;
+}
+
+.card-source {
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: .6;
+}
+
+.card h2 {
+  font-size: 23px;
+  line-height: 1.15;
+  font-weight: 300;
+  margin: 8px 0;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.45;
+  margin: 0;
+  opacity: .82;
+}
+
+.card-time {
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-top: 14px;
+  opacity: .5;
+}
+
+footer {
+  clear: both;
+  margin-top: 34px;
+  padding-top: 14px;
+  border-top: 1px solid #444444;
+  font-size: 11px;
+  letter-spacing: 2px;
+  opacity: .45;
+}
+
+@media (max-width: 430px) {
+  .page {
+    padding: 18px 14px 32px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .tile {
+    width: 100%;
+  }
+}
