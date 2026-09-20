@@ -79,6 +79,8 @@ body { min-width: 320px; }
 .tile-blue { background: #1468a8; }
 .tile-dark { background: #303030; }
 .tile-gold { background: #a47700; }
+.tile-green { background: #28734a; }
+.tile-purple { background: #60418a; }
 
 .tile-icon {
   display: block;
