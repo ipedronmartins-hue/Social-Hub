@@ -94,7 +94,7 @@ async function fetchReddit() {
 function render(label,items,errors) {
   var cards=items.map(function(x){
     return "<article class='card'><div class='card-source'>"+esc(x.meta.split(" · ")[0])+"</div>"+
-      "<h2><a href='"+esc(x.link)+"'>"+esc(x.title)+"</a></h2>"+
+      "<h2><a href='/api/read?url="+encodeURIComponent(x.link)+"'>"+esc(x.title)+"</a></h2>"+
       "<p>"+esc(x.meta)+"</p></article>";
   }).join("");
 
