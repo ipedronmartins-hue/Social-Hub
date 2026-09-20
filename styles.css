@@ -7,9 +7,7 @@ html, body {
   -webkit-text-size-adjust: none;
 }
 
-body {
-  min-width: 320px;
-}
+body { min-width: 320px; }
 
 .page {
   width: 100%;
@@ -101,9 +99,7 @@ body {
   opacity: .8;
 }
 
-.feed {
-  clear: both;
-}
+.feed { clear: both; }
 
 .section-title {
   font-size: 15px;
@@ -132,6 +128,19 @@ body {
   margin: 8px 0;
 }
 
+.card h2 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.card h2 a:visited {
+  color: #ffffff;
+}
+
+.card h2 a:active {
+  color: #ffffff;
+}
+
 .card p {
   font-size: 15px;
   line-height: 1.45;
@@ -156,16 +165,13 @@ footer {
   opacity: .45;
 }
 
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 @media (max-width: 430px) {
-  .page {
-    padding: 18px 14px 32px;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .tile {
-    width: 100%;
-  }
+  .page { padding: 18px 14px 32px; }
+  .hero h1 { font-size: 34px; }
+  .tile { width: 100%; }
 }
