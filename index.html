@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="pt-PT">
+<html lang="pt-PT" class="shell">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=320, initial-scale=1, user-scalable=no">
 <title>Social Hub</title>
 <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
+<body class="shell">
 <div id="app" class="app">
   <div class="statusbar"><span>social hub</span><span>LUMIA 830</span></div>
   <div id="viewport" class="viewport">
@@ -24,7 +24,7 @@
     <p class="intro">Tudo o que acompanhas,<br>num só lugar.</p>
 
     <div class="tile-grid">
-      <a class="tile tile-cyber" data-source="cyber" href="/api/feed?source=cyber"><span class="tile-code">CY</span><strong>CYBER</strong><small>segurança</small><em>...</em></a>
+      <a class="tile tile-cyber" data-source="cyber" href="/api/feed?source=cyber"><span class="tile-code">SEC</span><strong>CYBER</strong><small>segurança</small><em>...</em></a>
       <a class="tile tile-legacy" data-source="legacy" href="/api/feed?source=legacy"><span class="tile-code">LG</span><strong>LEGACY</strong><small>tecnologia</small><em>...</em></a>
       <a class="tile tile-world" data-source="world" href="/api/feed?source=world"><span class="tile-code">WO</span><strong>MUNDO</strong><small>Rússia · Ucrânia</small><em>...</em></a>
       <a class="tile tile-football" data-source="football" href="/api/feed?source=football"><span class="tile-code">FB</span><strong>FUTEBOL</strong><small>notícias</small><em>...</em></a>
@@ -39,15 +39,15 @@
     <p class="intro">As tuas fontes,<br>num só lugar.</p>
     <div class="source-count">09 FONTES · CLOUD</div>
     <div class="source-list">
-      <a href="/api/feed?source=cyber"><b>THN</b><span>The Hacker News</span></a>
-      <a href="/api/feed?source=cyber"><b>BC</b><span>BleepingComputer</span></a>
-      <a href="/api/feed?source=cyber"><b>K</b><span>Krebs on Security</span></a>
-      <a href="/api/feed?source=world"><b>G</b><span>The Guardian</span></a>
-      <a href="/api/feed?source=news"><b>RTP</b><span>RTP Notícias</span></a>
-      <a href="/api/feed?source=cycling"><b>CN</b><span>Cyclingnews</span></a>
-      <a href="/api/feed?source=cardputer"><b>M5</b><span>M5Stack / Cardputer</span></a>
-      <a href="/api/feed?source=reddit"><b>R</b><span>Reddit</span></a>
-      <a href="https://web.whatsapp.com/"><b>WA</b><span>WhatsApp Web · teste</span></a>
+      <a class="cat-cyber" href="/api/feed?source=cyber"><span class="avatar">THN</span><span class="src-text"><strong>The Hacker News</strong><small>CYBER · RSS</small></span></a>
+      <a class="cat-cyber" href="/api/feed?source=cyber"><span class="avatar">BC</span><span class="src-text"><strong>BleepingComputer</strong><small>CYBER · RSS</small></span></a>
+      <a class="cat-cyber" href="/api/feed?source=cyber"><span class="avatar">K</span><span class="src-text"><strong>Krebs on Security</strong><small>CYBER · RSS</small></span></a>
+      <a class="cat-world" href="/api/feed?source=world"><span class="avatar">G</span><span class="src-text"><strong>The Guardian</strong><small>MUNDO · RSS</small></span></a>
+      <a class="cat-news" href="/api/feed?source=news"><span class="avatar">RTP</span><span class="src-text"><strong>RTP Notícias</strong><small>NOTÍCIAS · RSS</small></span></a>
+      <a class="cat-cycling" href="/api/feed?source=cycling"><span class="avatar">CN</span><span class="src-text"><strong>Cyclingnews</strong><small>CICLISMO · RSS</small></span></a>
+      <a class="cat-cardputer" href="/api/feed?source=cardputer"><span class="avatar">M5</span><span class="src-text"><strong>M5Stack / Cardputer</strong><small>CARDPUTER · RSS</small></span></a>
+      <a class="cat-reddit" href="/api/feed?source=reddit"><span class="avatar">R</span><span class="src-text"><strong>Reddit</strong><small>REDDIT · r/portugal</small></span></a>
+      <a class="cat-external" href="https://web.whatsapp.com/"><span class="avatar">WA</span><span class="src-text"><strong>WhatsApp Web</strong><small>EXTERNO · teste</small></span></a>
     </div>
   </section>
 
@@ -56,29 +56,28 @@
     <p class="intro">O que aconteceu<br>agora.</p>
     <div class="recent-live"><span class="live-dot">●</span> FEED AO VIVO <span>·</span> ATUALIZAÇÃO CLOUD <b id="recent-state">a ligar...</b></div>
 
-    <a class="recent-item" href="/api/feed?source=all">
-      <span class="recent-source">TIMELINE</span>
-      <strong>Ver todas as novidades</strong>
-      <small>Cyber · Legacy · Mundo · Futebol · Ciclismo · Cardputer</small>
+    <a class="recent-item cat-all" href="/api/feed?source=all">
+      <span class="avatar">ALL</span>
+      <span class="ri-text"><strong>Ver todas as novidades</strong>
+      <small>TIMELINE · Cyber · Legacy · Mundo · Futebol · Ciclismo · Cardputer</small></span>
     </a>
 
-    <a class="recent-item" href="/api/feed?source=cyber">
-      <span class="recent-source">CYBER</span>
-      <strong>Últimas notícias de segurança</strong>
-      <small>Hacking · vulnerabilidades · tecnologia</small>
+    <a class="recent-item cat-cyber" href="/api/feed?source=cyber">
+      <span class="avatar">SEC</span>
+      <span class="ri-text"><strong>Últimas notícias de segurança</strong>
+      <small>CYBER · Hacking · vulnerabilidades · tecnologia</small></span>
     </a>
 
-    <a class="recent-item" href="/api/feed?source=football">
-      <span class="recent-source">FUTEBOL</span>
-      <strong>Últimas notícias do futebol</strong>
-      <small>Notícias e desporto</small>
+    <a class="recent-item cat-football" href="/api/feed?source=football">
+      <span class="avatar">FUT</span>
+      <span class="ri-text"><strong>Últimas notícias do futebol</strong>
+      <small>FUTEBOL · notícias e desporto</small></span>
     </a>
 
-
-    <a class="recent-item" href="/api/feed?source=cycling">
-      <span class="recent-source">CICLISMO</span>
-      <strong>Últimas do ciclismo</strong>
-      <small>Corridas · equipas · mercado</small>
+    <a class="recent-item cat-cycling" href="/api/feed?source=cycling">
+      <span class="avatar">CIC</span>
+      <span class="ri-text"><strong>Últimas do ciclismo</strong>
+      <small>CICLISMO · corridas · equipas · mercado</small></span>
     </a>
   </section>
 

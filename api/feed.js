@@ -27,6 +27,11 @@ var SOURCES = {
   ]
 };
 
+// Categorias conhecidas -> usadas para escolher a cor de acento da pagina.
+// Nunca interpolamos req.query.source diretamente no HTML: so passa se
+// estiver nesta lista.
+var KNOWN_CATS = ["cyber","legacy","world","football","cycling","cardputer","news","reddit","all"];
+
 function esc(v) {
   return String(v || "").replace(/&/g,"&amp;").replace(/</g,"&lt;")
     .replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
@@ -91,28 +96,41 @@ async function fetchReddit() {
   });
 }
 
-function render(label,items,errors) {
+// Iniciais curtas para o avatar quadrado (estilo People Hub): "THE HACKER
+// NEWS" -> "THN". Fonte de conteudo controlada (vem sempre de x.meta, que
+// nasce de source.label definido acima), nunca de input livre do utilizador.
+function initials(v){
+  var words=String(v||"").trim().split(/\s+/).filter(Boolean);
+  if(words.length>=2) return words.slice(0,3).map(function(w){return w.charAt(0);}).join("").toUpperCase();
+  return String(v||"").replace(/[^A-Za-z0-9]/g,"").slice(0,3).toUpperCase()||"•";
+}
+
+function render(label,items,errors,catClass) {
   var cards=items.map(function(x){
-    return "<article class='card'><div class='card-source'>"+esc(x.meta.split(" · ")[0])+"</div>"+
+    var src=x.meta.split(" · ")[0];
+    return "<article class='card'><span class='avatar'>"+esc(initials(src))+"</span>"+
+      "<span class='card-body'><div class='card-source'>"+esc(src)+"</div>"+
       "<h2><a href='/api/read?url="+encodeURIComponent(x.link)+"'>"+esc(x.title)+"</a></h2>"+
-      "<p>"+esc(x.meta)+"</p></article>";
+      "<p>"+esc(x.meta)+"</p></span></article>";
   }).join("");
 
-  if(!cards) cards="<article class='card'><div class='card-source'>SOCIAL HUB</div>"+
-    "<h2>Sem conteúdos neste momento.</h2><p>A fonte pode estar temporariamente indisponível.</p></article>";
+  if(!cards) cards="<article class='card'><span class='avatar'>SH</span>"+
+    "<span class='card-body'><div class='card-source'>SOCIAL HUB</div>"+
+    "<h2>Sem conteúdos neste momento.</h2><p>A fonte pode estar temporariamente indisponível.</p></span></article>";
 
-  if(errors.length) cards += "<article class='card'><div class='card-source'>AVISO</div><p>"+
-    esc(errors.join(" · "))+"</p></article>";
+  if(errors.length) cards += "<article class='card'><span class='avatar'>!</span>"+
+    "<span class='card-body'><div class='card-source'>AVISO</div><p>"+
+    esc(errors.join(" · "))+"</p></span></article>";
 
   return "<!doctype html><html lang='pt-PT'><head><meta charset='utf-8'>"+
     "<meta name='viewport' content='width=device-width, initial-scale=1'>"+
     "<title>Social Hub - "+esc(label)+"</title><link rel='stylesheet' href='/styles.css'></head>"+
-    "<body><div class='page'><header class='header'><div class='brand'>SOCIAL HUB</div>"+
+    "<body><div class='page cat-"+catClass+"'><header class='header'><div class='brand'>SOCIAL HUB</div>"+
     "<div class='subtitle'>FEED · "+esc(label)+"</div></header><main>"+
     "<section class='hero'><div class='eyebrow'>ONLINE</div><h1>"+esc(label)+"</h1>"+
     "<p>Conteúdo recolhido na cloud e convertido para HTML compatível com o Lumia.</p></section>"+
     "<section class='feed'><div class='section-title'>ÚLTIMAS</div>"+cards+"</section></main>"+
-    "<footer><a href='/' style='color:#fff'>← VOLTAR</a> · SOCIAL HUB 2026</footer>"+
+    "<footer><a href='/'>← VOLTAR</a> · SOCIAL HUB 2026</footer>"+
     "</div></body></html>";
 }
 
@@ -138,7 +156,9 @@ module.exports=async function(req,res) {
     errors.push("Fonte desconhecida");
   }
 
+  var catClass = KNOWN_CATS.indexOf(source) !== -1 ? source : "all";
+
   res.setHeader("Content-Type","text/html; charset=utf-8");
   res.setHeader("Cache-Control","s-maxage=120, stale-while-revalidate=300");
-  res.status(200).send(render(label,items,errors));
+  res.status(200).send(render(label,items,errors,catClass));
 };
