@@ -1,52 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
 html,body{
-margin:0;padding:0;background:#000;color:#fff;
-font-family:"Segoe WP","Segoe UI",Arial,sans-serif;
+margin:0;padding:0;background:#080C08;color:#ECEFEA;
+font-family:'Plus Jakarta Sans','Segoe UI',Arial,sans-serif;
 -webkit-text-size-adjust:none;-ms-text-size-adjust:none;
 }
 *{box-sizing:border-box}
 @-ms-viewport{width:320px;height:480px}
 @viewport{width:320px;zoom:1}
-a{color:#fff;text-decoration:none}
+a{color:inherit;text-decoration:none}
 
-/* A app-shell (panorama do index.html) é o UNICO sitio onde a pagina
+/* A app-shell (panorama do index.html) e o UNICO sitio onde a pagina
    fica presa a 320x480 sem scroll. As paginas de conteudo (feed/leitura)
    usam <html>/<body> normais, com scroll vertical nativo. */
 html.shell{width:320px;height:480px;overflow:hidden}
 body.shell{width:320px;height:480px;min-width:320px;max-width:320px;overflow:hidden}
 
-/* ===== Paleta de acento (Metro / Lumia), por categoria ===== */
-.accent{color:#1BA1E2}
+/* ===================================================================
+   Paleta traduzida da YTB (ytb-tokens.css) para valores fixos — o IE11
+   do Lumia nao le var(--x), por isso os hex vao direto em cada regra.
+   bg #080C08 · texto #ECEFEA · slate #9AA39A · muted #6B756C
+   verde (sistema/acao) #00D46A · sinais: roxo #A78BFA laranja #E0A458
+   azul #5AA9E6 vermelho #ff5050 · dourado #D4AF37 fica reservado,
+   tal como na YTB, e nao entra na paleta de categorias.
+   Tipografia: Barlow Condensed (titulos/labels, sempre bold/black) +
+   Plus Jakarta Sans (texto corrido). Cantos mantidos a direito (sem
+   border-radius) — isso e' a parte que fica fiel ao Windows Phone.
+   =================================================================== */
 
-/* Avatar quadrado com iniciais — usado em qualquer lista "estilo People
-   Hub / Novidades": recent-item, source-list e card. A cor vem sempre
-   de uma classe .cat-X num antepassado (o proprio link, ou a .page). */
 .avatar{
 display:block;float:left;width:52px;height:52px;margin-right:12px;
-background:#333;color:#fff;font-size:13px;font-weight:600;letter-spacing:.3px;
+background:#2A322B;color:#ECEFEA;font-family:'Barlow Condensed',Arial,sans-serif;
+font-size:15px;font-weight:800;letter-spacing:.3px;
 text-align:center;line-height:52px;text-transform:uppercase;overflow:hidden;
 white-space:nowrap;
 }
-.cat-cyber .avatar{background:#AA00FF}
-.cat-legacy .avatar{background:#F0A30A}
-.cat-world .avatar{background:#00ABA7}
-.cat-football .avatar{background:#60A917}
-.cat-cycling .avatar{background:#E51400}
-.cat-cardputer .avatar{background:#647687}
-.cat-reddit .avatar{background:#FA6800}
-.cat-news .avatar{background:#0050EF}
-.cat-external .avatar{background:#333}
-.cat-all .avatar{background:#1BA1E2}
+.cat-cyber .avatar{background:#A78BFA;color:#0A0D0A}
+.cat-legacy .avatar{background:#E0A458;color:#0A0D0A}
+.cat-world .avatar{background:#5AA9E6;color:#0A0D0A}
+.cat-football .avatar{background:#00D46A;color:#0A0D0A}
+.cat-cycling .avatar{background:#ff5050;color:#0A0D0A}
+.cat-cardputer .avatar{background:#9AA39A;color:#0A0D0A}
+.cat-reddit .avatar{background:#E0A458;color:#0A0D0A}
+.cat-news .avatar{background:#5AA9E6;color:#0A0D0A}
+.cat-external .avatar{background:#161D17;color:#6B756C}
+.cat-all .avatar{background:#00D46A;color:#0A0D0A}
 
 /* ===================================================== */
 /* APP SHELL — index.html (panorama Lumia)                */
 /* ===================================================== */
-.app{width:320px;height:480px;overflow:hidden;position:relative;background:#000}
+.app{width:320px;height:480px;overflow:hidden;position:relative;background:#080C08}
 .statusbar{
 position:absolute;top:0;left:0;z-index:80;width:320px;height:22px;
-padding:6px 12px 0;font-size:9px;line-height:10px;letter-spacing:1px;color:#555;
+padding:6px 12px 0;font-family:'Barlow Condensed',Arial,sans-serif;
+font-size:10px;font-weight:700;line-height:10px;letter-spacing:1px;color:#6B756C;
 text-transform:uppercase;
 }
-.statusbar span:last-child{float:right;color:#1BA1E2}
+.statusbar span:last-child{float:right;color:#00D46A}
 
 .viewport{
 position:absolute;top:0;left:0;width:320px;height:450px;overflow:hidden;
@@ -61,12 +71,13 @@ white-space:nowrap;
 }
 .pivot{
 display:inline-block;height:37px;margin-right:27px;
-font-size:21px;line-height:30px;font-weight:300;letter-spacing:-.4px;
-color:#666;white-space:nowrap;
+font-family:'Barlow Condensed',Arial,sans-serif;
+font-size:22px;line-height:30px;font-weight:700;letter-spacing:0;
+color:#6B756C;white-space:nowrap;
 }
-.pivot.current{color:#fff}
+.pivot.current{color:#ECEFEA;font-weight:800}
 .pivot:after{
-content:"";display:block;height:2px;width:0;background:#1BA1E2;margin-top:0;
+content:"";display:block;height:2px;width:0;background:#00D46A;margin-top:0;
 }
 .pivot.current:after{width:100%}
 
@@ -76,138 +87,150 @@ padding:0 14px 34px 14px;overflow:hidden;
 }
 .panel-home{padding-top:39px}
 .panel-home .brand{
-font-size:57px;line-height:.82;font-weight:200;letter-spacing:-3.2px;
+font-family:'Barlow Condensed',Arial,sans-serif;
+font-size:57px;line-height:.86;font-weight:900;letter-spacing:-1px;
 white-space:nowrap;
 }
 .panel-home .brand-sub{
-font-size:9px;line-height:11px;letter-spacing:2.4px;color:#5c5c5c;
-margin-top:13px;
+font-family:'Barlow Condensed',Arial,sans-serif;
+font-size:10px;font-weight:700;line-height:11px;letter-spacing:2px;color:#6B756C;
+margin-top:13px;text-transform:uppercase;
 }
 .home-kicker{
-font-size:25px;line-height:28px;font-weight:300;letter-spacing:-.8px;
-margin-top:42px;color:#eee;
+font-family:'Barlow Condensed',Arial,sans-serif;
+font-size:26px;line-height:28px;font-weight:800;letter-spacing:0;
+margin-top:42px;color:#ECEFEA;
 }
 .intro{
-font-size:15px;line-height:17px;font-weight:300;margin:3px 0 12px;color:#aaa;
+font-size:15px;line-height:17px;font-weight:400;margin:3px 0 12px;color:#9AA39A;
 }
 
 .tile-grid{width:292px;height:188px;display:block}
 .tile{
 position:relative;float:left;width:144px;height:61px;margin:0 2px 2px 0;
-padding:7px 8px;background:#151515;overflow:hidden;
-border-left:3px solid #444;
+padding:7px 8px;background:#0F1410;overflow:hidden;
+border-left:3px solid #2A322B;
 }
 .tile:nth-child(2n){margin-right:0}
 .tile-code{
-display:inline-block;padding:0 5px;height:18px;font-size:9px;line-height:18px;
-text-align:center;background:#292929;color:#bbb;letter-spacing:.5px;
+display:inline-block;padding:0 5px;height:18px;font-family:'Barlow Condensed',Arial,sans-serif;
+font-size:10px;font-weight:800;line-height:18px;
+text-align:center;background:#1A241A;color:#9AA39A;letter-spacing:.5px;
 margin-bottom:3px;white-space:nowrap;
 }
 .tile strong{
-display:block;font-size:14px;line-height:14px;font-weight:400;
-letter-spacing:.4px;white-space:nowrap;
+display:block;font-family:'Barlow Condensed',Arial,sans-serif;
+font-size:15px;line-height:15px;font-weight:800;
+letter-spacing:.2px;white-space:nowrap;color:#ECEFEA;
 }
 .tile small{
-position:absolute;left:8px;bottom:7px;font-size:9px;line-height:10px;color:#777;
+position:absolute;left:8px;bottom:7px;font-size:9px;line-height:10px;color:#6B756C;
 white-space:nowrap;
 }
 .tile em{
 position:absolute;right:7px;bottom:7px;font-size:8px;font-style:normal;
-letter-spacing:.4px;color:#555;text-transform:uppercase;
+letter-spacing:.4px;color:#6B756C;text-transform:uppercase;
 }
-.tile-cyber{border-left-color:#AA00FF}.tile-legacy{border-left-color:#F0A30A}
-.tile-world{border-left-color:#00ABA7}.tile-football{border-left-color:#60A917}
-.tile-cycling{border-left-color:#E51400}.tile-cardputer{border-left-color:#647687}
-.tile:active{background:#292929}
+.tile-cyber{border-left-color:#A78BFA}.tile-legacy{border-left-color:#E0A458}
+.tile-world{border-left-color:#5AA9E6}.tile-football{border-left-color:#00D46A}
+.tile-cycling{border-left-color:#ff5050}.tile-cardputer{border-left-color:#9AA39A}
+.tile:active{background:#161D17}
 
 .home-status{
-width:292px;margin-top:7px;padding-top:7px;border-top:1px solid #202020;
-font-size:8px;line-height:10px;letter-spacing:1.1px;color:#555;
+width:292px;margin-top:7px;padding-top:7px;border-top:1px solid #1F2520;
+font-family:'Barlow Condensed',Arial,sans-serif;
+font-size:9px;font-weight:700;line-height:10px;letter-spacing:1px;color:#6B756C;
 white-space:nowrap;
 }
-.home-status .live-dot{color:#1BA1E2}
-.home-status span{margin:0 2px;color:#444}
-.home-status b{font-weight:300;color:#777}
+.home-status .live-dot{color:#00D46A}
+.home-status span{margin:0 2px;color:#2A322B}
+.home-status b{font-weight:700;color:#9AA39A}
 
 .section-kicker{
-font-size:10px;line-height:12px;letter-spacing:2.6px;text-transform:uppercase;
-color:#555;margin-top:151px;
+font-family:'Barlow Condensed',Arial,sans-serif;
+font-size:11px;line-height:12px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;
+color:#6B756C;margin-top:151px;
 }
 .panel-title{
-font-size:40px;line-height:40px;font-weight:200;letter-spacing:-1.8px;
-margin:1px 0 0;color:#fff;white-space:nowrap;
+font-family:'Barlow Condensed',Arial,sans-serif;
+font-size:42px;line-height:40px;font-weight:900;letter-spacing:-.5px;
+margin:1px 0 0;color:#ECEFEA;white-space:nowrap;
 }
 .panel-sources .intro,.panel-recent .intro{
-font-size:13px;line-height:15px;margin:4px 0 6px;color:#999;
+font-size:13px;line-height:15px;margin:4px 0 6px;color:#9AA39A;
 white-space:nowrap;
 }
 .source-count{
-font-size:8px;line-height:10px;letter-spacing:1.6px;color:#555;margin:0 0 7px;
+font-family:'Barlow Condensed',Arial,sans-serif;
+font-size:9px;font-weight:700;line-height:10px;letter-spacing:1.4px;color:#6B756C;margin:0 0 7px;
 }
 .source-list{width:292px;display:block}
-.source-list a{display:block;width:292px;min-height:64px;padding:7px 0;border-bottom:1px solid #1c1c1c}
+.source-list a{display:block;width:292px;min-height:64px;padding:7px 0;border-bottom:1px solid #1F2520}
+.source-list a:active{background:#0F1410}
 .source-list a:after{content:"";display:block;clear:both}
 .source-list .src-text{display:block;overflow:hidden;padding-top:3px}
-.source-list .src-text strong{display:block;font-size:15px;line-height:18px;font-weight:600;color:#fff}
-.source-list .src-text small{display:block;font-size:10px;line-height:13px;color:#888;margin-top:2px}
+.source-list .src-text strong{display:block;font-family:'Barlow Condensed',Arial,sans-serif;font-size:16px;line-height:18px;font-weight:800;color:#ECEFEA}
+.source-list .src-text small{display:block;font-size:10px;line-height:13px;color:#9AA39A;margin-top:2px}
 
 .recent-live{
-width:292px;height:21px;padding:3px 0 5px;border-bottom:1px solid #202020;
-font-size:8px;line-height:11px;letter-spacing:1.2px;color:#555;
+width:292px;height:21px;padding:3px 0 5px;border-bottom:1px solid #1F2520;
+font-family:'Barlow Condensed',Arial,sans-serif;
+font-size:9px;font-weight:700;line-height:11px;letter-spacing:1px;color:#6B756C;
 white-space:nowrap;
 }
-.recent-live .live-dot{color:#1BA1E2}
-.recent-live span{margin:0 2px;color:#444}
-.recent-live b{font-weight:300;color:#777}
-.recent-item{display:block;width:292px;min-height:64px;padding:7px 0;border-bottom:1px solid #1c1c1c}
+.recent-live .live-dot{color:#00D46A}
+.recent-live span{margin:0 2px;color:#2A322B}
+.recent-live b{font-weight:700;color:#9AA39A}
+.recent-item{display:block;width:292px;min-height:64px;padding:7px 0;border-bottom:1px solid #1F2520}
+.recent-item:active{background:#0F1410}
 .recent-item:after{content:"";display:block;clear:both}
 .recent-item .ri-text{display:block;overflow:hidden;padding-top:3px}
-.recent-item strong{display:block;font-size:15px;line-height:18px;font-weight:600;color:#fff}
-.recent-item small{display:block;font-size:10px;line-height:13px;color:#888;margin-top:2px;white-space:normal}
+.recent-item strong{display:block;font-family:'Barlow Condensed',Arial,sans-serif;font-size:16px;line-height:18px;font-weight:800;color:#ECEFEA}
+.recent-item small{display:block;font-size:10px;line-height:13px;color:#9AA39A;margin-top:2px;white-space:normal}
 .appbar{
 position:absolute;bottom:0;left:0;z-index:80;width:320px;height:30px;
-background:#000;border-top:1px solid #111;text-align:right;padding:5px 12px 0;
+background:#080C08;border-top:1px solid #1F2520;text-align:right;padding:5px 12px 0;
 }
-.appbar span{display:inline-block;font-size:7px;line-height:18px;letter-spacing:1px;color:#444;margin-left:15px;vertical-align:top}
-.bar-home{border-bottom:1px solid #1BA1E2}.bar-refresh{border-bottom:1px solid #333}.bar-more{border-bottom:1px solid #222}.gesture-hint{display:none}
+.appbar span{display:inline-block;font-family:'Barlow Condensed',Arial,sans-serif;font-size:8px;font-weight:700;line-height:18px;letter-spacing:1px;color:#6B756C;margin-left:15px;vertical-align:top}
+.bar-home{border-bottom:1px solid #00D46A}.bar-refresh{border-bottom:1px solid #2A322B}.bar-more{border-bottom:1px solid #1F2520}.gesture-hint{display:none}
 
 /* ===================================================== */
 /* PAGINAS DE CONTEUDO — /api/feed e /api/read            */
 /* (fluxo normal, com scroll; NAO herdam o .shell)         */
 /* ===================================================== */
 .page{min-height:100%;padding:18px 18px 40px;max-width:480px;margin:0 auto}
-.header{padding-bottom:10px;margin-bottom:14px;border-bottom:1px solid #1e1e1e}
-.header .brand{font-size:20px;font-weight:400;letter-spacing:.5px;white-space:nowrap}
-.subtitle{font-size:9px;letter-spacing:2px;color:#666;text-transform:uppercase;margin-top:3px}
-.eyebrow{font-size:10px;letter-spacing:2.6px;text-transform:uppercase;color:#555;margin-bottom:2px}
-.hero h1{font-size:32px;line-height:1.05;font-weight:200;letter-spacing:-1px;margin:0 0 6px;color:#fff}
-.hero p{font-size:13px;line-height:1.4;color:#999;margin:0 0 16px}
-.section-title{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#555;margin:0 0 8px;padding-top:10px;border-top:1px solid #1e1e1e}
+.header{padding-bottom:10px;margin-bottom:14px;border-bottom:1px solid #1F2520}
+.header .brand{font-family:'Barlow Condensed',Arial,sans-serif;font-size:22px;font-weight:800;letter-spacing:.2px;white-space:nowrap}
+.subtitle{font-family:'Barlow Condensed',Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:1.8px;color:#6B756C;text-transform:uppercase;margin-top:3px}
+.eyebrow{font-family:'Barlow Condensed',Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;color:#6B756C;margin-bottom:2px}
+.hero h1{font-family:'Barlow Condensed',Arial,sans-serif;font-size:34px;line-height:1;font-weight:900;letter-spacing:-.5px;margin:0 0 6px;color:#ECEFEA}
+.hero p{font-size:13px;line-height:1.4;color:#9AA39A;margin:0 0 16px}
+.section-title{font-family:'Barlow Condensed',Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:#6B756C;margin:0 0 8px;padding-top:10px;border-top:1px solid #1F2520}
 
-.card{display:block;padding:9px 0;margin-bottom:0;border-bottom:1px solid #1c1c1c}
+.card{display:block;padding:9px 0;margin-bottom:0;border-bottom:1px solid #1F2520}
 .card:after{content:"";display:block;clear:both}
-.card:active{background:#141414}
+.card:active{background:#0F1410}
 .card .card-body{display:block;overflow:hidden;padding-top:1px}
-.card-source{font-size:9px;letter-spacing:1.6px;text-transform:uppercase;color:#777;margin-bottom:3px}
-.card h2{margin:0;font-size:15px;line-height:1.25;font-weight:600;color:#fff}
+.card-source{font-family:'Barlow Condensed',Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#9AA39A;margin-bottom:3px}
+.card h2{margin:0;font-family:'Barlow Condensed',Arial,sans-serif;font-size:16px;line-height:1.2;font-weight:700;color:#ECEFEA}
 .card h2 a{display:block}
-.card p{margin:4px 0 0;font-size:10px;color:#666}
+.card p{margin:4px 0 0;font-size:10px;color:#6B756C}
 
-.page.cat-cyber .card-source{color:#AA00FF}
-.page.cat-legacy .card-source{color:#F0A30A}
-.page.cat-world .card-source{color:#00ABA7}
-.page.cat-football .card-source{color:#60A917}
-.page.cat-cycling .card-source{color:#E51400}
-.page.cat-cardputer .card-source{color:#647687}
-.page.cat-reddit .card-source{color:#FA6800}
-.page.cat-news .card-source{color:#0050EF}
-.page.cat-all .card-source{color:#1BA1E2}
+.page.cat-cyber .card-source{color:#A78BFA}
+.page.cat-legacy .card-source{color:#E0A458}
+.page.cat-world .card-source{color:#5AA9E6}
+.page.cat-football .card-source{color:#00D46A}
+.page.cat-cycling .card-source{color:#ff5050}
+.page.cat-cardputer .card-source{color:#9AA39A}
+.page.cat-reddit .card-source{color:#E0A458}
+.page.cat-news .card-source{color:#5AA9E6}
+.page.cat-all .card-source{color:#00D46A}
 
 footer{padding-top:16px;margin-top:10px}
-footer a{display:inline-block;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#1BA1E2}
+footer a{display:inline-block;font-family:'Barlow Condensed',Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#00D46A}
 
 .reader{width:auto;max-width:480px;margin:0 auto;padding:0}
-.reader h1{font-size:28px;line-height:1.15;font-weight:200;margin:0 0 18px;color:#fff}
-.reader-body{font-size:17px;line-height:1.55;color:#eee}
+.reader h1{font-family:'Barlow Condensed',Arial,sans-serif;font-size:30px;line-height:1.1;font-weight:900;margin:0 0 18px;color:#ECEFEA}
+.reader-body{font-size:17px;line-height:1.6;color:#ECEFEA}
 .reader-body p{margin:0 0 18px}
-.reader-note{margin-top:25px;padding-top:12px;border-top:1px solid #333;font-size:11px;color:#777}
+.reader-note{margin-top:25px;padding-top:12px;border-top:1px solid #1F2520;font-size:11px;color:#6B756C}
