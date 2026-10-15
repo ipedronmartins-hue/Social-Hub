@@ -30,7 +30,7 @@ UA = 'Mozilla/5.0 (compatible; PessoalHub/1.0; leitor pessoal de feeds publicos)
 TIMEOUT = 20
 MAX_FEED_BYTES = 6 * 1024 * 1024
 MAX_IMG_BYTES = 3 * 1024 * 1024
-THUMB_W = 320
+THUMB_W = 560
 HOST_DELAY = {'www.reddit.com': 10.0}
 DEFAULT_DELAY = 1.0
 
@@ -188,7 +188,7 @@ def make_thumb(url):
             return None
         im = im.convert('RGB')
         im.thumbnail((THUMB_W, THUMB_W * 2))
-        im.save(path, 'JPEG', quality=70, optimize=True)
+        im.save(path, "JPEG", quality=72, optimize=True)
         return name
     except Exception:
         with _img_lock:
