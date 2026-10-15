@@ -1,0 +1,585 @@
+{
+  "itemsPerSource": 10,
+  "itemsPerSection": 50,
+  "sections": [
+    {
+      "id": "guerra",
+      "title": "guerra",
+      "accent": "#FFE51400",
+      "sources": [
+        {
+          "name": "Bellingcat",
+          "url": "https://www.bellingcat.com/feed/"
+        },
+        {
+          "name": "War on the Rocks",
+          "url": "https://warontherocks.com/feed/"
+        },
+        {
+          "name": "The War Zone",
+          "url": "https://www.twz.com/feed"
+        },
+        {
+          "name": "Meduza",
+          "url": "https://meduza.io/rss/en/all"
+        },
+        {
+          "name": "The Moscow Times",
+          "url": "https://www.themoscowtimes.com/rss/news"
+        },
+        {
+          "name": "Ukrainska Pravda",
+          "url": "https://www.pravda.com.ua/eng/rss/view_news/"
+        },
+        {
+          "name": "Euromaidan Press",
+          "url": "https://euromaidanpress.com/feed/"
+        },
+        {
+          "name": "Oryx",
+          "url": "https://www.oryxspioenkop.com/feeds/posts/default"
+        },
+        {
+          "name": "Defense One",
+          "url": "https://www.defenseone.com/rss/all/"
+        },
+        {
+          "name": "Kyiv Independent",
+          "url": "https://news.google.com/rss/search?q=site%3Akyivindependent.com&hl=en&gl=GB&ceid=GB:en"
+        },
+        {
+          "name": "BBC · Ucrânia",
+          "url": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
+        },
+        {
+          "name": "Guardian · Ucrânia",
+          "url": "https://www.theguardian.com/world/ukraine/rss"
+        },
+        {
+          "name": "Google News · guerra da Ucrânia",
+          "url": "https://news.google.com/rss/search?q=guerra%20Ucr%C3%A2nia&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        },
+        {
+          "name": "Google News · Ukraine war",
+          "url": "https://news.google.com/rss/search?q=Ukraine%20war%20frontline&hl=en&gl=GB&ceid=GB:en"
+        },
+        {
+          "name": "Google News · Médio Oriente",
+          "url": "https://news.google.com/rss/search?q=M%C3%A9dio%20Oriente%20guerra&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        }
+      ]
+    },
+    {
+      "id": "politica",
+      "title": "política",
+      "accent": "#FF1BA1E2",
+      "sources": [
+        {
+          "name": "Politico",
+          "url": "https://rss.politico.com/politics-news.xml"
+        },
+        {
+          "name": "Politico Europe",
+          "url": "https://www.politico.eu/feed/"
+        },
+        {
+          "name": "NPR · Política",
+          "url": "https://feeds.npr.org/1014/rss.xml"
+        },
+        {
+          "name": "NPR · Mundo",
+          "url": "https://feeds.npr.org/1004/rss.xml"
+        },
+        {
+          "name": "Guardian · EUA",
+          "url": "https://www.theguardian.com/us-news/rss"
+        },
+        {
+          "name": "Guardian · Reino Unido",
+          "url": "https://www.theguardian.com/politics/rss"
+        },
+        {
+          "name": "BBC · Política",
+          "url": "https://feeds.bbci.co.uk/news/politics/rss.xml"
+        },
+        {
+          "name": "BBC · Mundo",
+          "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        },
+        {
+          "name": "NYT · Política",
+          "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml"
+        },
+        {
+          "name": "NYT · Mundo",
+          "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
+        },
+        {
+          "name": "Euronews",
+          "url": "https://www.euronews.com/rss?level=theme&name=news"
+        },
+        {
+          "name": "DW",
+          "url": "https://rss.dw.com/rdf/rss-en-all"
+        },
+        {
+          "name": "France 24",
+          "url": "https://www.france24.com/en/rss"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/xml/rss/all.xml"
+        },
+        {
+          "name": "Google News · política EUA",
+          "url": "https://news.google.com/rss/search?q=US%20politics%20White%20House%20Congress&hl=en&gl=GB&ceid=GB:en"
+        },
+        {
+          "name": "Google News · União Europeia",
+          "url": "https://news.google.com/rss/search?q=European%20Union%20Brussels&hl=en&gl=GB&ceid=GB:en"
+        },
+        {
+          "name": "Google News · Reino Unido",
+          "url": "https://news.google.com/rss/search?q=UK%20politics%20Westminster&hl=en&gl=GB&ceid=GB:en"
+        }
+      ]
+    },
+    {
+      "id": "portugal",
+      "title": "jornais",
+      "accent": "#FF60A917",
+      "sources": [
+        {
+          "name": "Público",
+          "url": "https://feeds.feedburner.com/PublicoRSS"
+        },
+        {
+          "name": "Observador",
+          "url": "https://observador.pt/feed/"
+        },
+        {
+          "name": "RTP Notícias",
+          "url": "https://www.rtp.pt/noticias/rss/"
+        },
+        {
+          "name": "CNN Portugal",
+          "url": "https://cnnportugal.iol.pt/rss"
+        },
+        {
+          "name": "Jornal Económico",
+          "url": "https://jornaleconomico.pt/feed/"
+        },
+        {
+          "name": "SIC Notícias",
+          "url": "https://news.google.com/rss/search?q=site%3Asicnoticias.pt&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        },
+        {
+          "name": "Jornal de Notícias",
+          "url": "https://news.google.com/rss/search?q=site%3Ajn.pt&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        },
+        {
+          "name": "Notícias ao Minuto",
+          "url": "https://news.google.com/rss/search?q=site%3Anoticiasaominuto.com&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        },
+        {
+          "name": "Google News · Portugal",
+          "url": "https://news.google.com/rss?hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        }
+      ]
+    },
+    {
+      "id": "futebol",
+      "title": "futebol",
+      "accent": "#FF0050EF",
+      "sources": [
+        {
+          "name": "Record",
+          "url": "https://www.record.pt/rss"
+        },
+        {
+          "name": "Maisfutebol",
+          "url": "https://maisfutebol.iol.pt/rss"
+        },
+        {
+          "name": "A Bola",
+          "url": "https://news.google.com/rss/search?q=site%3Aabola.pt&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        },
+        {
+          "name": "O Jogo",
+          "url": "https://news.google.com/rss/search?q=site%3Aojogo.pt&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        },
+        {
+          "name": "zerozero",
+          "url": "https://news.google.com/rss/search?q=site%3Azerozero.pt&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        },
+        {
+          "name": "Google News · FC Porto",
+          "url": "https://news.google.com/rss/search?q=%22FC%20Porto%22&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        },
+        {
+          "name": "Google News · Liga Portugal",
+          "url": "https://news.google.com/rss/search?q=Liga%20Portugal%20futebol&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        },
+        {
+          "name": "BBC Sport · Futebol",
+          "url": "https://feeds.bbci.co.uk/sport/football/rss.xml"
+        },
+        {
+          "name": "Guardian · Futebol",
+          "url": "https://www.theguardian.com/football/rss"
+        },
+        {
+          "name": "ESPN · Futebol",
+          "url": "https://www.espn.com/espn/rss/soccer/news"
+        },
+        {
+          "name": "Sky Sports · Futebol",
+          "url": "https://www.skysports.com/rss/12040"
+        }
+      ]
+    },
+    {
+      "id": "formacao",
+      "title": "formação",
+      "accent": "#FF00ABA9",
+      "sources": [
+        {
+          "name": "Google News · futebol de formação",
+          "url": "https://news.google.com/rss/search?q=%22futebol%20de%20forma%C3%A7%C3%A3o%22&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        },
+        {
+          "name": "Google News · escalões jovens",
+          "url": "https://news.google.com/rss/search?q=futebol%20jovem%20juniores%20iniciados%20academia&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        },
+        {
+          "name": "Google News · academias",
+          "url": "https://news.google.com/rss/search?q=academia%20de%20futebol%20forma%C3%A7%C3%A3o%20jovens%20talentos&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        },
+        {
+          "name": "Google News · youth football",
+          "url": "https://news.google.com/rss/search?q=youth%20football%20academy%20development&hl=en&gl=GB&ceid=GB:en"
+        },
+        {
+          "name": "Google News · FPF jovens",
+          "url": "https://news.google.com/rss/search?q=FPF%20sele%C3%A7%C3%B5es%20jovens%20sub-21%20sub-19%20sub-17&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        },
+        {
+          "name": "Google News · Dragon Force / Porto formação",
+          "url": "https://news.google.com/rss/search?q=FC%20Porto%20Drag%C3%A3o%20forma%C3%A7%C3%A3o%20sub-23%20juniores&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        }
+      ]
+    },
+    {
+      "id": "ciclismo",
+      "title": "ciclismo",
+      "accent": "#FFF0A30A",
+      "sources": [
+        {
+          "name": "Cyclingnews",
+          "url": "https://www.cyclingnews.com/rss/"
+        },
+        {
+          "name": "Cycling Weekly",
+          "url": "https://www.cyclingweekly.com/feeds.xml"
+        },
+        {
+          "name": "Velo",
+          "url": "https://velo.outsideonline.com/feed/"
+        },
+        {
+          "name": "road.cc",
+          "url": "https://road.cc/rss"
+        },
+        {
+          "name": "Google News · ciclismo",
+          "url": "https://news.google.com/rss/search?q=ciclismo%20OR%20%22Volta%20a%20Portugal%22&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        },
+        {
+          "name": "Google News · cycling",
+          "url": "https://news.google.com/rss/search?q=professional%20cycling%20peloton%20Tour&hl=en&gl=GB&ceid=GB:en"
+        },
+        {
+          "name": "Rouleur",
+          "url": "https://www.rouleur.cc/blogs/the-rouleur-journal.atom"
+        }
+      ]
+    },
+    {
+      "id": "tecnologia",
+      "title": "tecnologia",
+      "accent": "#FF8C00FF",
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://feeds.arstechnica.com/arstechnica/index"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/rss/index.xml"
+        },
+        {
+          "name": "Hacker News",
+          "url": "https://hnrss.org/frontpage"
+        },
+        {
+          "name": "Engadget",
+          "url": "https://www.engadget.com/rss.xml"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/feed/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/feed/rss"
+        },
+        {
+          "name": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/feeds/all"
+        },
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/headlines.atom"
+        },
+        {
+          "name": "Slashdot",
+          "url": "http://rss.slashdot.org/Slashdot/slashdotMain"
+        },
+        {
+          "name": "Pplware",
+          "url": "https://pplware.sapo.pt/feed/"
+        },
+        {
+          "name": "SAPO Tek",
+          "url": "https://tek.sapo.pt/rss"
+        },
+        {
+          "name": "Windows Central",
+          "url": "https://www.windowscentral.com/rss"
+        }
+      ]
+    },
+    {
+      "id": "legacy",
+      "title": "legacy",
+      "accent": "#FFA20025",
+      "sources": [
+        {
+          "name": "MSPoweruser",
+          "url": "https://mspoweruser.com/feed/"
+        },
+        {
+          "name": "Nokiamob",
+          "url": "https://nokiamob.net/feed/"
+        },
+        {
+          "name": "Nokia Power User",
+          "url": "https://nokiapoweruser.com/feed/"
+        },
+        {
+          "name": "BlackBerry Empire",
+          "url": "https://www.blackberryempire.com/feed/"
+        },
+        {
+          "name": "GSMArena",
+          "url": "https://www.gsmarena.com/rss-news-reviews.php3"
+        },
+        {
+          "name": "Hackaday",
+          "url": "https://hackaday.com/blog/feed/"
+        },
+        {
+          "name": "Google News · Windows Phone",
+          "url": "https://news.google.com/rss/search?q=%22Windows%20Phone%22%20OR%20%22Windows%2010%20Mobile%22%20OR%20Lumia&hl=en&gl=GB&ceid=GB:en"
+        },
+        {
+          "name": "Google News · Symbian",
+          "url": "https://news.google.com/rss/search?q=Symbian%20Nokia%20S60&hl=en&gl=GB&ceid=GB:en"
+        },
+        {
+          "name": "Google News · BlackBerry OS",
+          "url": "https://news.google.com/rss/search?q=BlackBerry%20OS%20BB10%20BlackBerry%2010&hl=en&gl=GB&ceid=GB:en"
+        },
+        {
+          "name": "Google News · iOS legacy",
+          "url": "https://news.google.com/rss/search?q=%22iOS%206%22%20OR%20%22iOS%207%22%20OR%20%22legacy%20iOS%22%20OR%20%22old%20iPhone%22%20jailbreak&hl=en&gl=GB&ceid=GB:en"
+        },
+        {
+          "name": "Google News · telemóveis antigos",
+          "url": "https://news.google.com/rss/search?q=telem%C3%B3veis%20antigos%20retro%20Nokia%20cl%C3%A1ssicos&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        }
+      ]
+    },
+    {
+      "id": "reddit",
+      "title": "reddit",
+      "accent": "#FFFF4500",
+      "sources": [
+        {
+          "name": "r/windowsphone",
+          "url": "https://www.reddit.com/r/windowsphone/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/Windows10Mobile",
+          "url": "https://www.reddit.com/r/Windows10Mobile/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/symbian",
+          "url": "https://www.reddit.com/r/symbian/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/nokia",
+          "url": "https://www.reddit.com/r/nokia/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/BlackBerry10",
+          "url": "https://www.reddit.com/r/BlackBerry10/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/LegacyJailbreak",
+          "url": "https://www.reddit.com/r/LegacyJailbreak/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/ubuntuphone",
+          "url": "https://www.reddit.com/r/ubuntuphone/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/dumbphones",
+          "url": "https://www.reddit.com/r/dumbphones/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/webOS",
+          "url": "https://www.reddit.com/r/webOS/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/UkrainianConflict",
+          "url": "https://www.reddit.com/r/UkrainianConflict/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/CredibleDefense",
+          "url": "https://www.reddit.com/r/CredibleDefense/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/cycling",
+          "url": "https://www.reddit.com/r/cycling/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/hacking",
+          "url": "https://www.reddit.com/r/hacking/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/blackberry",
+          "url": "https://www.reddit.com/r/blackberry/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/legacyiOS",
+          "url": "https://www.reddit.com/r/legacyiOS/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/UbuntuTouch",
+          "url": "https://www.reddit.com/r/UbuntuTouch/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/retrophones",
+          "url": "https://www.reddit.com/r/retrophones/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/portugal",
+          "url": "https://www.reddit.com/r/portugal/.rss",
+          "kind": "reddit"
+        },
+        {
+          "name": "r/soccer",
+          "url": "https://www.reddit.com/r/soccer/.rss",
+          "kind": "reddit"
+        }
+      ]
+    },
+    {
+      "id": "musica",
+      "title": "música",
+      "accent": "#FFD80073",
+      "sources": [
+        {
+          "name": "Pitchfork",
+          "url": "https://pitchfork.com/feed/feed-news/rss"
+        },
+        {
+          "name": "Stereogum",
+          "url": "https://www.stereogum.com/feed/"
+        },
+        {
+          "name": "NME",
+          "url": "https://www.nme.com/feed"
+        },
+        {
+          "name": "Rolling Stone · Música",
+          "url": "https://www.rollingstone.com/music/feed/"
+        }
+      ]
+    },
+    {
+      "id": "hacking",
+      "title": "hacking",
+      "accent": "#FF00AB00",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/feed/"
+        },
+        {
+          "name": "The Hacker News",
+          "url": "https://feeds.feedburner.com/TheHackersNews"
+        },
+        {
+          "name": "Krebs on Security",
+          "url": "https://krebsonsecurity.com/feed/"
+        },
+        {
+          "name": "Schneier",
+          "url": "https://www.schneier.com/feed/atom/"
+        }
+      ]
+    },
+    {
+      "id": "famosos",
+      "title": "famosos",
+      "accent": "#FFE51400",
+      "sources": [
+        {
+          "name": "TMZ",
+          "url": "https://www.tmz.com/rss.xml"
+        },
+        {
+          "name": "People",
+          "url": "https://news.google.com/rss/search?q=site%3Apeople.com&hl=en&gl=GB&ceid=GB:en"
+        },
+        {
+          "name": "The Hollywood Reporter",
+          "url": "https://www.hollywoodreporter.com/feed/"
+        },
+        {
+          "name": "Google News · celebridades PT",
+          "url": "https://news.google.com/rss/search?q=celebridades%20portuguesas&hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        }
+      ]
+    }
+  ]
+}
