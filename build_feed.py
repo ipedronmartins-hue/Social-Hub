@@ -419,6 +419,11 @@ def main():
     }
     with open(os.path.join(OUT, 'hub.json'), 'w', encoding='utf-8', newline='\n') as f:
         json.dump(doc, f, ensure_ascii=False, separators=(',', ':'))
+
+    parati = next((s for s in sections if s['id'] == 'parati'), None)
+    heads = [{'s': it['source'], 't': it['title']} for it in (parati['items'] if parati else [])[:6]]
+    with open(os.path.join(OUT, 'tile.json'), 'w', encoding='utf-8', newline='\n') as f:
+        json.dump({'generated': doc['generated'], 'items': heads}, f, ensure_ascii=False, separators=(',', ':'))
     total = sum(len(s['items']) for s in sections if s['id'] != 'parati')
     log('feito: %d itens em %d seccoes, %d falhas, %d miniaturas' % (total, len(sections), len(failures), len(_wanted_imgs)))
     return 0
