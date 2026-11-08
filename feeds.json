@@ -145,6 +145,41 @@
       ]
     },
     {
+      "id": "mundo",
+      "title": "mundo",
+      "accent": "#FF647687",
+      "sources": [
+        {
+          "name": "BBC Mundo",
+          "url": "https://feeds.bbci.co.uk/mundo/rss.xml"
+        },
+        {
+          "name": "Guardian World",
+          "url": "https://www.theguardian.com/world/rss"
+        },
+        {
+          "name": "DW",
+          "url": "https://rss.dw.com/xml/rss-en-all"
+        },
+        {
+          "name": "NPR",
+          "url": "https://feeds.npr.org/1001/rss.xml"
+        },
+        {
+          "name": "El País",
+          "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada"
+        },
+        {
+          "name": "G1",
+          "url": "https://g1.globo.com/rss/g1/"
+        },
+        {
+          "name": "Folha",
+          "url": "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml"
+        }
+      ]
+    },
+    {
       "id": "portugal",
       "title": "jornais",
       "accent": "#FF60A917",
@@ -184,6 +219,73 @@
         {
           "name": "Google News · Portugal",
           "url": "https://news.google.com/rss?hl=pt-PT&gl=PT&ceid=PT:pt-150"
+        },
+        {
+          "name": "TVI Notícias",
+          "url": "https://tvi.iol.pt/rss"
+        },
+        {
+          "name": "Sapo 24",
+          "url": "https://24.sapo.pt/rss"
+        },
+        {
+          "name": "Correio da Manhã",
+          "url": "https://www.cmjornal.pt/rss"
+        },
+        {
+          "name": "Sábado",
+          "url": "https://www.sabado.pt/rss"
+        },
+        {
+          "name": "Visão",
+          "url": "https://visao.pt/feed/"
+        },
+        {
+          "name": "DW Português",
+          "url": "https://rss.dw.com/rdf/rss-br-all"
+        },
+        {
+          "name": "RFI Português",
+          "url": "https://www.rfi.fr/pt/rss"
+        },
+        {
+          "name": "BBC Português",
+          "url": "https://feeds.bbci.co.uk/portuguese/rss.xml"
+        }
+      ]
+    },
+    {
+      "id": "economia",
+      "title": "economia",
+      "accent": "#FF6D8764",
+      "sources": [
+        {
+          "name": "ECO",
+          "url": "https://eco.sapo.pt/feed/"
+        },
+        {
+          "name": "Jornal de Negócios",
+          "url": "https://www.jornaldenegocios.pt/rss"
+        },
+        {
+          "name": "Jornal Económico",
+          "url": "https://jornaleconomico.sapo.pt/feed/"
+        },
+        {
+          "name": "Observador Economia",
+          "url": "https://observador.pt/seccao/economia/feed/"
+        },
+        {
+          "name": "Executive Digest",
+          "url": "https://executivedigest.sapo.pt/feed/"
+        },
+        {
+          "name": "Bloomberg",
+          "url": "https://feeds.bloomberg.com/markets/news.rss"
+        },
+        {
+          "name": "Investing",
+          "url": "https://www.investing.com/rss/news.rss"
         }
       ]
     },
@@ -235,6 +337,69 @@
         {
           "name": "Sky Sports · Futebol",
           "url": "https://www.skysports.com/rss/12040"
+        },
+        {
+          "name": "Marca",
+          "url": "https://e00-marca.uecdn.es/rss/portada.xml"
+        },
+        {
+          "name": "Gazzetta",
+          "url": "https://www.gazzetta.it/rss/home.xml"
+        },
+        {
+          "name": "Football Italia",
+          "url": "https://football-italia.net/feed/"
+        },
+        {
+          "name": "FourFourTwo",
+          "url": "https://www.fourfourtwo.com/feeds/all"
+        },
+        {
+          "name": "Kicker",
+          "url": "https://newsfeed.kicker.de/news/aktuell"
+        }
+      ]
+    },
+    {
+      "id": "desporto",
+      "title": "desporto",
+      "accent": "#FFFA6800",
+      "sources": [
+        {
+          "name": "BBC Sport",
+          "url": "https://feeds.bbci.co.uk/sport/rss.xml"
+        },
+        {
+          "name": "BBC Fórmula 1",
+          "url": "https://feeds.bbci.co.uk/sport/formula1/rss.xml"
+        },
+        {
+          "name": "Sky Sports F1",
+          "url": "https://www.skysports.com/rss/12433"
+        },
+        {
+          "name": "Autosport",
+          "url": "https://www.autosport.com/rss/feed/all"
+        },
+        {
+          "name": "Motorsport.com",
+          "url": "https://www.motorsport.com/rss/all/news/"
+        },
+        {
+          "name": "BBC Ténis",
+          "url": "https://feeds.bbci.co.uk/sport/tennis/rss.xml"
+        },
+        {
+          "name": "BBC Basquetebol",
+          "url": "https://feeds.bbci.co.uk/sport/basketball/rss.xml"
+        },
+        {
+          "name": "BBC Râguebi",
+          "url": "https://feeds.bbci.co.uk/sport/rugby-union/rss.xml"
+        },
+        {
+          "name": "Federação de Andebol",
+          "url": "https://www.fpa.pt/feed"
         }
       ]
     },
@@ -356,6 +521,29 @@
         {
           "name": "Windows Central",
           "url": "https://www.windowscentral.com/rss"
+        },
+        {
+          "name": "Observador Tecnologia",
+          "url": "https://observador.pt/seccao/tecnologia/feed/"
+        }
+      ]
+    },
+    {
+      "id": "ciencia",
+      "title": "ciência",
+      "accent": "#FF825A2C",
+      "sources": [
+        {
+          "name": "NASA",
+          "url": "https://www.nasa.gov/feed/"
+        },
+        {
+          "name": "Science Daily",
+          "url": "https://www.sciencedaily.com/rss/all.xml"
+        },
+        {
+          "name": "Nature",
+          "url": "https://www.nature.com/nature.rss"
         }
       ]
     },
@@ -532,6 +720,25 @@
         {
           "name": "Rolling Stone · Música",
           "url": "https://www.rollingstone.com/music/feed/"
+        }
+      ]
+    },
+    {
+      "id": "cultura",
+      "title": "cultura",
+      "accent": "#FF76608A",
+      "sources": [
+        {
+          "name": "Observador Cultura",
+          "url": "https://observador.pt/seccao/cultura/feed/"
+        },
+        {
+          "name": "Rotten Tomatoes",
+          "url": "https://editorial.rottentomatoes.com/feed/"
+        },
+        {
+          "name": "Variety",
+          "url": "https://variety.com/feed/"
         }
       ]
     },
